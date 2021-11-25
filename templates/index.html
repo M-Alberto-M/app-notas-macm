@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "layout.html" %}
+  
+
+   <head>
+      <meta charset="utf-8">
+      {% block titulo %}Pagina principal {% endblock %}
+      <title>Home</title>
+    </head>
+
+    <body>
+   {% block contenido %}
+
+   <h3><center> Crea tu lista</center></h3>
+   <br>
+   <h5><center> Desarrollado por: MarioAlberto Corodova Mendoza  </center></h5>
+   <br>
+   <h6><center>El proposito de esta pagina brindar un servicio para la creacion de notas de tareas por realizar,
+      y de esta manera el usuario pueda organizar de forma mas eficiente sus tareas pendientes. </center></h6>
+
+  <!--<p>Nombres</p>
+  {% for nombre in variable %}
+    <p>{{nombre}}</p>
+    {% endfor %}-->
+    <p><center>
+      <form action="/crearnota" method="post">
+         <label for="titulo"> Titulo de la nota: </label><br>
+         <input type="text" name="campotitulo" value="">
+         <br>
+         <label for="cuerpo">Cuerpo de la Nota: </label><br>
+         <input type="text"  name="campocuerpo" value="">
+         <input type="submit" value="Crear nota">
+         </form></center></p>
+
+               
+
+  
+
+{% endblock %}
+</body>
+</html>
+
+ 

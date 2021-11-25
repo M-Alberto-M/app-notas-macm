@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+   {% block titulo %}Pagina modificar {% endblock %}
+   
+   {% block contenido %}
+   
+   <h3><center>Modificar Notas </center></h3>
+    <br>
+    <h4><center>En esta sección podrás modificar tus notas creadas </center></h4>
+
+  
+    <p><center>
+   <p>{{nota}}</p>
+   <form action= "/modificarnota" method= "post">
+      <label for = "titulo"> Titulo de la Nota: </label><br>
+      <input type = "text" name = "campotitulo" value = "{{nota.tituloNota}}">
+      <br>
+      <label for = "cuerpo"> Cuerpo de la Nota: </label><br>
+      <input type = "text" name = "campocuerpo" value = "{{nota.cuerpoNota}}">     
+      <input type = "hidden" name="idnota" value = " {{nota.idNota}}">
+      <input type = "submit" value = "Modificar Nota">
+  
+   </form> 
+
+</center></p>
+
+
+
+
+{% endblock %}

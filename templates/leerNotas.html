@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+   {% block titulo %}Pagina Leer {% endblock %}
+
+   {% block contenido %}
+   
+   <h3><center>Lista de notas Creadas </center></h3>
+
+
+   <p><center>
+    
+    <p>{{consulta}}</p>
+
+     <table styles="width:100%">
+        {% for nota in consulta %}
+        <p>
+        <tr>
+           <td >{{nota.tituloNota}}</td> 
+
+           <td >{{nota.cuerpoNota}}</td> 
+      
+           <td><form action="/eliminarnota/{{nota.idNota}}" >
+              <input type="submit" value="Eliminar"> 
+           </form></td> 
+           
+           <td><form action="/edit/{{nota.idNota}}" >
+              <input type="submit" value="Editar"> 
+           </form></td> 
+
+
+     </tr>
+  </p>
+        {% endfor %}    
+     </table>
+              
+
+  {% endblock %}
+</center></p>
+
+
+   
